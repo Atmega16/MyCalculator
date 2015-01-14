@@ -8,6 +8,7 @@ int main()
 {
    float a, b, result;
    char operation;
+   int ok = 0;
  
    // Get numbers and mathematical operator from user input
    cout<< "Zahl eingeben:\n";
@@ -29,6 +30,17 @@ int main()
    default:
          cout << "Invalid operation. Program terminated." << endl;
          return -1;
+   }
+
+   cout<<"Zahlen miteinander Vergleichen? 0 nein 1 ja";
+   cin<<ok;
+   
+   if(ok){
+      if(a==b) cout<<"Zahlen sind identisch!";
+      else   {
+         if(a>b) cout<< "Erste Zahl ist größer";
+         else cout<<"Zweite Zahl ist größer";
+      }
    }
 
    // Output result
